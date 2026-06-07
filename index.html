@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Unquiet Mind</title>
+<title>yapation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=JetBrains+Mono:wght@300;400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -302,29 +302,29 @@
 <canvas id="bubble-canvas"></canvas>
 
 <nav>
-  <div class="nav-logo" id="nav-logo">The Unquiet <span>Mind</span></div>
+  <div class="nav-logo" id="nav-logo">Yapation <span>Yapation</span></div>
   <div class="nav-filters">
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="thoughts">Thoughts</button>
     <button class="filter-btn" data-filter="rants">Rants</button>
     <button class="filter-btn" data-filter="life">Life</button>
-    <button class="filter-btn" data-filter="creative">Creative</button>
+    <button class="filter-btn" data-filter="creative">Stuff</button>
   </div>
   <div class="nav-right">
     <div id="mood-indicator">
       <div class="mood-dot"></div>
-      <span id="mood-text">somewhere between fine and falling apart</span>
+      <span id="mood-text">i speak way too much </span>
     </div>
     <div id="confetti-wrap" role="button" tabindex="0" aria-label="Press for confetti">
       <button id="confetti-btn" aria-hidden="true">🎊</button>
-      <span id="confetti-label">press for confetti</span>
+      <span id="confetti-label">press for awesome confetti</span>
     </div>
     <button id="admin-toggle" title=""></button>
   </div>
 </nav>
 
 <section id="hero">
-  <div class="hero-eyebrow">est. the moment i ran out of people to text at 2am ✦</div>
+  <div class="hero-eyebrow">where i come when i run out of people to text at 2am ✦</div>
   <h1 class="hero-title">too much to say,<br><em>here we go.</em></h1>
   <p class="hero-tagline"><span id="typewriter-text"></span></p>
   <div class="hero-scroll">scroll down ↓ i promise it's good</div>
@@ -374,7 +374,7 @@
         <button class="tag-opt selected" data-tag="thoughts">Thoughts</button>
         <button class="tag-opt" data-tag="rants">Rants</button>
         <button class="tag-opt" data-tag="life">Life</button>
-        <button class="tag-opt" data-tag="creative">Creative</button>
+        <button class="tag-opt" data-tag="creative">Stuff</button>
       </div>
     </div>
     <textarea class="write-body-input" id="write-body" placeholder="okay so here's the thing..."></textarea>
@@ -394,23 +394,23 @@
 const ADMIN_PASSWORD = 'nocturne';
 const ADMIN_SHORTCUT = ['a','d','m'];
 const TYPEWRITER_PHRASES = [
-  'i have a lot of feelings and zero chill about it.',
+  'i am an open book on the internet now',
   'written at 1am with full emotional commitment.',
   'oversharing is my love language and i stand by that.',
   "some of these are profound. most are just chaos. you'll see.",
-  'hi!! if you\'re reading this i already like you.',
-  'half journal, half scream into the void, half snack break.',
-  "this is my space and i'm going to use it aggressively.",
+  'hi!! lets keep this discrete and not leak my secrets',
+  'half journal, half scream into the void, half ice cream break.',
+  "this is my space and i'm going to use it aggressively hehe",
 ];
 const MOODS = [
-  'currently: too many tabs open (brain & browser)',
-  'vibing, but make it complicated',
-  'eating snacks and having thoughts',
+  'currently: i think i want some ice cream',
+  'do you know me personally?',
+  'eating ice cream and having thoughts',
   'somewhere between a nap and an existential crisis',
   'hyperfixating on something new already',
   'doing okay actually!! (suspicious)',
   'in my feelings but make it cute',
-  'catastrophising gently ✦',
+  'working on da weekend like usual ✦',
 ];
 
 let posts = JSON.parse(localStorage.getItem('unquiet_posts') || '[]');
@@ -422,12 +422,12 @@ let shortcutTimer = null;
 
 if (posts.length === 0) {
   posts = [
-    { id:'seed-1', title:'First light, still dark', tag:'thoughts', date: new Date(Date.now()-86400000*3).toISOString(),
-      body:"There's a specific quality of silence that exists around 4am. Not peaceful — more like the world is holding its breath. I've been sitting with it instead of fighting it lately.\n\nI keep thinking about how we move through days like tourists in our own lives. Snapping photos instead of standing still. Narrating instead of feeling.\n\nThis is me trying to stop narrating. Just a little." },
-    { id:'seed-2', title:'The problem with being a person', tag:'rants', date: new Date(Date.now()-86400000*7).toISOString(),
-      body:"Everyone wants you to be legible. Classifiable. Put you in a category they already understand so they can stop paying attention.\n\nI've spent years trying to be easier to understand and I think I've just made myself harder to find.\n\nThere's something to be said for opacity. Let them squint a little." },
-    { id:'seed-3', title:'Notes on being almost content', tag:'life', date: new Date(Date.now()-86400000*14).toISOString(),
-      body:"I made tea this morning and sat by the window and didn't look at my phone for almost twenty minutes. This felt like a significant achievement.\n\nThe light was doing something complicated with the dust. I watched it for a while.\n\nMaybe this is what people mean when they talk about presence. It doesn't feel profound. It feels like tea." },
+    { id:'seed-1', title:'FIRSTTT', tag:'thoughts', date: new Date(Date.now()-86400000*3).toISOString(),
+      body:"hiiii ! if youre seeing this then this is my sample blog post for now!! im still experimenting hehe" },
+    { id:'seed-2', title:'WELCOME GUYS', tag:'rants', date: new Date(Date.now()-86400000*7).toISOString(),
+      body:"welcome to my personal space yayy" },
+    { id:'seed-3', title:'Puppy with propeller hat and giant lollipop', tag:'life', date: new Date(Date.now()-86400000*14).toISOString(),
+      body:"romaticize life,, even if u cant just do it. or atleast have fun while youre at it :)" },
     { id:'seed-4', title:'On the craft of saying nothing well', tag:'creative', date: new Date(Date.now()-86400000*21).toISOString(),
       body:"Every sentence is a negotiation between what you want to say and what language will actually hold.\n\nSome things collapse the moment you try to describe them. You reach for the word and the feeling vanishes — like trying to catch light in your hands.\n\nI've been writing around this for years. I'm not sure I've said anything yet. Maybe that's the point." },
   ];
